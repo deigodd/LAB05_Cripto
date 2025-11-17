@@ -10,6 +10,11 @@ services:
     networks:
       lab_network:
         ipv4_address: 172.20.0.10
+    volumes:
+      - ./captures/C1:/captures
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
     tty: true
     stdin_open: true
 
@@ -22,6 +27,11 @@ services:
     networks:
       lab_network:
         ipv4_address: 172.20.0.11
+    volumes:
+      - ./captures/C2:/captures
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
     tty: true
     stdin_open: true
 
@@ -34,6 +44,11 @@ services:
     networks:
       lab_network:
         ipv4_address: 172.20.0.12
+    volumes:
+      - ./captures/C3:/captures
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
     tty: true
     stdin_open: true
 
@@ -46,6 +61,11 @@ services:
     networks:
       lab_network:
         ipv4_address: 172.20.0.13
+    volumes:
+      - ./captures/S1:/captures
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
     ports:
       - "2222:22"
     tty: true
